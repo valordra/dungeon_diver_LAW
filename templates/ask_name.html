@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <p class="text-center fs-1 text-white">{{ ask_prompt }}</p>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <form action="/create_player" method="post">
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                         <input type="text" value="Player" class="form-control" id="player_name_prompt" name="player_name">
+                    </div>
+                   <div class="col-auto">
+                       <label for="player_name_prompt" class="form-label text-white">Is this your name?</label>
+                   </div>
+                    <button type="submit" class="btn btn-outline-light">It is.</button>
+                  </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

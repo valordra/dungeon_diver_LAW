@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <p class="text-center fs-2 text-white">Victory!</p>
+    </div>
+    <div class="container">
+        <p class="text-center fs-6 text-white">{{ player.name }} defeated the enemy!</p>
+        <p class="text-center fs-6 text-white">You got {{ xp_reward }} experience!</p>
+         <div class="d-flex justify-content-center">
+            <a href="/main">
+                <button  type="button" class="btn fs-1 btn-outline-success">Return to safety</button>
+            </a>
+        </div>
+    </div>
+
+{% endblock content %}

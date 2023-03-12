@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <p class="text-center fs-2 text-white">{{ player.name }} has perished in the dungeon...</p>
+        <p class="text-center fs-2 text-white">Your final streak was: {{ player.current_streak }}.</p>
+        <p class="text-center fs-3 text-white">Highscores: </p>
+    </div>
+    <table>
+    {% for highscore in highscores %}
+        <tr>
+        <p class="text-center fs-4 text-white">{{ highscore[0] }} - {{ highscore[1] }}</p>
+        </tr>
+    {% endfor %}
+    </table>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <a href="/ask_name">
+                <button  type="button" class="btn fs-1 btn-outline-warning">Try again?</button>
+            </a>
+        </div>
+    </div>
+
+{% endblock content %}

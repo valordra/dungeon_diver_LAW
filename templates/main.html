@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <p class="text-center fs-1 text-white">Welcome to the dungeon.</p>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <a href="/encounter">
+                <p class="text-center fs-1 text-blue">Encounter!</p>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <p class="text-center fs-2 text-white">{{ player.name }}</p>
+            </div>
+            <p class="text-center fs-6 text-white">{{ level_up_message }}</p>
+            <p class="text-center fs-6 text-white">Current streak: {{ player.current_streak }}</p>
+        </div>
+        <div class="row g-4 align-items-center justify-content-center">
+             <div class="col-auto text-white">
+                 Health: {{ player.health_current }}/{{ player.health_max }}.
+             </div>
+            <div class="col-auto text-white">
+                 Heals: {{ player.heals }}/3.
+             </div>
+            <div class="col-auto text-white">
+                 Level: {{ player.level }}
+             </div>
+            <div class="col-auto text-white">
+                 XP: {{ player.xp_current }}/{{ player.xp_needed }}.
+             </div>
+        </div>
+    </div>
+
+{% endblock content %}
